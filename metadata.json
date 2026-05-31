@@ -1,0 +1,6 @@
+{
+  "name": "GATE 2027 Prep",
+  "description": "GATE 2027 preparation advisor with mock tests, daily study schedules, subject-wise progress tracking, peer discussion forum, and a personalized AI mentor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
