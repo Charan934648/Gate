@@ -39,6 +39,7 @@ export default function ProgressTracker({ syllabus, onToggleTopicCompletion, onD
       case "Database": return <Database className="w-5 h-5 text-amber-500" />;
       case "Globe": return <Globe className="w-5 h-5 text-cyan-500" />;
       case "Code": return <Code className="w-5 h-5 text-emerald-500" />;
+      case "Award": return <Award className="w-5 h-5 text-amber-500" />;
       default: return <BookOpenCheck className="w-5 h-5 text-slate-500" />;
     }
   };

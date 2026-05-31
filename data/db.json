@@ -1,0 +1,574 @@
+{
+  "syllabus": [
+    {
+      "subjectName": "Discrete Mathematics & Linear Algebra",
+      "iconName": "Binary",
+      "totalHours": 45,
+      "topics": [
+        {
+          "id": "dm_1",
+          "name": "Propositional & First-Order Logic; Sat, Tautologies",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 2,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "dm_2",
+          "name": "Combinatorics: Generating Functions & Pigeonhole Principle",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "dm_3",
+          "name": "Graph Theory: Connectivity, Coloring & Planarity",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "dm_4",
+          "name": "Linear Algebra: Matrices, Eigenvalues & Cayley-Hamilton",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 1,
+          "difficulty": "Medium"
+        }
+      ]
+    },
+    {
+      "subjectName": "Digital Logic & Computer Architecture",
+      "iconName": "Cpu",
+      "totalHours": 35,
+      "topics": [
+        {
+          "id": "dl_1",
+          "name": "Boolean Minimization, K-Maps & Combinational Circuits",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 2,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "dl_2",
+          "name": "Sequential Circuits: Counters, Registers & State Diagrams",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "dl_3",
+          "name": "Instruction Pipelining: Hazards, Speedup & CPI",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "dl_4",
+          "name": "Memory Hierarchy: Cache Mapping & Page Replacement",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 1,
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    {
+      "subjectName": "Programming & Data Structures",
+      "iconName": "Code",
+      "totalHours": 40,
+      "topics": [
+        {
+          "id": "ds_1",
+          "name": "Recursion, Pointer Arithmetic & Parameter Passing in C",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 3,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "ds_2",
+          "name": "Stacks, Queues, Linked Lists & Arrays",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 1,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "ds_3",
+          "name": "Binary Trees, Binary Search Trees & AVL Trees",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "ds_4",
+          "name": "Heaps: Max/Min Heap Operations & Priority Queues",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        }
+      ]
+    },
+    {
+      "subjectName": "Algorithms Complexities & Graphs",
+      "iconName": "Code",
+      "totalHours": 55,
+      "topics": [
+        {
+          "id": "alg_1",
+          "name": "Asymptotics: Big-O, Master Theorem for Recurrences",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 3,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "alg_2",
+          "name": "Greedy vs. Dynamic Programming (Matrix Chain, Knapsack)",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "alg_3",
+          "name": "Graph Search: BFS, DFS, Dijkstra & Bellman-Ford",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 2,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "alg_4",
+          "name": "MST Algorithms (Kruskal, Prim) & NP-Completeness",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    {
+      "subjectName": "Theory of Computation",
+      "iconName": "Binary",
+      "totalHours": 45,
+      "topics": [
+        {
+          "id": "toc_1",
+          "name": "DFAs, NFAs, Minimization & Regular Expressions",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 2,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "toc_2",
+          "name": "Context-Free Grammars, Languages & Pushdown Automata",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "toc_3",
+          "name": "Turing Machines, Computability & Church-Turing Thesis",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "toc_4",
+          "name": "Undecidable Problems: Halting & Post Correspondence",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    {
+      "subjectName": "Compiler Design",
+      "iconName": "Cpu",
+      "totalHours": 30,
+      "topics": [
+        {
+          "id": "cd_1",
+          "name": "Lexical Analysis & LL(1) Parsing Table Construction",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 1,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "cd_2",
+          "name": "LR Parsers: LR(0), SLR(1), LALR(1) & CLR(1)",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "cd_3",
+          "name": "Syntax-Directed Translation (S-attributed & L-attributed)",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "cd_4",
+          "name": "Intermediate Code, Three-Address Code & Register Storage",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        }
+      ]
+    },
+    {
+      "subjectName": "Operating Systems",
+      "iconName": "Cpu",
+      "totalHours": 35,
+      "topics": [
+        {
+          "id": "os_1",
+          "name": "Process Synchronization: Semaphores, Deadlocks & Bankers",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 3,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "os_2",
+          "name": "CPU Scheduling Algorithms (FCFS, SJF, Round Robin, SRTF)",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 2,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "os_3",
+          "name": "Memory Management: Paging & Segmentation schemes",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "os_4",
+          "name": "Virtual Memory, Thrashing & Page Replacement (LRU, FIFO)",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    {
+      "subjectName": "Databases (DBMS)",
+      "iconName": "Database",
+      "totalHours": 30,
+      "topics": [
+        {
+          "id": "db_1",
+          "name": "Relational Algebra Formulations & SQL Queries",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 2,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "db_2",
+          "name": "Normal Forms: Functional Dependencies, 3NF & BCNF",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "db_3",
+          "name": "Transactions Concurrency: Conflict Serializability, 2PL",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "db_4",
+          "name": "Database Indexing: B & B+ Tree heights & Search Costs",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    {
+      "subjectName": "Computer Networks",
+      "iconName": "Globe",
+      "totalHours": 40,
+      "topics": [
+        {
+          "id": "cn_1",
+          "name": "Concept of Layering: OSI, TCP/IP, Framing & Sliding Windows",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 1,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "cn_2",
+          "name": "IPv4, IPv6, Subnetting, CIDR & Address Routing",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "cn_3",
+          "name": "Routing Protocols: Link State (OSPF) & Distance Vector (RIP)",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        },
+        {
+          "id": "cn_4",
+          "name": "Transport Layer: TCP Connection, Flow & Congestion Control",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    {
+      "subjectName": "General Aptitude",
+      "iconName": "Award",
+      "totalHours": 25,
+      "topics": [
+        {
+          "id": "ga_1",
+          "name": "Quantitative Aptitude & Clocks/Series Sequences",
+          "completed": true,
+          "notesDownloaded": true,
+          "revisionCount": 1,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "ga_2",
+          "name": "Analytical Reasoning & Spatial Visual Layouts",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        },
+        {
+          "id": "ga_3",
+          "name": "Verbal Ability: Contextual Synonyms & Logics",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Easy"
+        },
+        {
+          "id": "ga_4",
+          "name": "Data Interpretation, Charts & Syllogism deductions",
+          "completed": false,
+          "notesDownloaded": false,
+          "revisionCount": 0,
+          "difficulty": "Medium"
+        }
+      ]
+    }
+  ],
+  "schedules": [
+    {
+      "date": "2026-06-01",
+      "dayName": "Monday",
+      "targetDailyHours": 6,
+      "completedHours": 4.5,
+      "tasks": [
+        {
+          "id": "task_1",
+          "timeSlot": "08:00 AM - 10:00 AM",
+          "taskTitle": "Revise CPU Scheduling Principles & SRTF",
+          "topic": "CPU Scheduling Algorithms (FCFS, SJF, Round Robin, SRTF)",
+          "subject": "Operating Systems",
+          "durationMinutes": 120,
+          "completed": true,
+          "resources": [
+            {
+              "name": "CPU Scheduling Core Notes.pdf",
+              "type": "pdf",
+              "url": "/api/download/resource?id=cpu_notes",
+              "downloaded": true
+            },
+            {
+              "name": "SRTF Preemptive Problems & Solutions.practice",
+              "type": "practice",
+              "url": "#",
+              "downloaded": false
+            }
+          ]
+        },
+        {
+          "id": "task_2",
+          "timeSlot": "11:00 AM - 12:30 PM",
+          "taskTitle": "Solve Linear Algebra Matrices Questions",
+          "topic": "Linear Algebra: Matrices, Eigenvalues & Cayley-Hamilton",
+          "subject": "Discrete Mathematics & Linear Algebra",
+          "durationMinutes": 90,
+          "completed": true,
+          "resources": [
+            {
+              "name": "Eigenvalues Solved standard proofs.pdf",
+              "type": "pdf",
+              "url": "/api/download/resource?id=la_eigen",
+              "downloaded": true
+            }
+          ]
+        },
+        {
+          "id": "task_3",
+          "timeSlot": "03:00 PM - 05:30 PM",
+          "taskTitle": "Relational Normal Forms & Dependency Preservation",
+          "topic": "Normal Forms: Functional Dependencies, 3NF & BCNF",
+          "subject": "Databases (DBMS)",
+          "durationMinutes": 150,
+          "completed": false,
+          "resources": [
+            {
+              "name": "Syllabus Normalization CheatSheet.pdf",
+              "type": "notes",
+              "url": "/api/download/resource?id=db_normal",
+              "downloaded": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "dayName": "Tuesday",
+      "targetDailyHours": 6,
+      "completedHours": 0,
+      "tasks: [
+        {
+          "id": "task_4",
+          "timeSlot": "08:30 AM - 11:30 AM",
+          "taskTitle": "Process Synchronization: Semaphores & Deadlocks",
+          "topic": "Process Synchronization: Semaphores, Deadlocks & Bankers",
+          "subject": "Operating Systems",
+          "durationMinutes": 180,
+          "completed": false,
+          "resources": [
+            {
+              "name": "Bankers Algorithm Notes.pdf",
+              "type": "pdf",
+              "url": "/api/download/resource?id=os_deadlock",
+              "downloaded": false
+            }
+          ]
+        },
+        {
+          "id": "task_5",
+          "timeSlot": "02:00 PM - 05:00 PM",
+          "taskTitle": "Formulate Relational Algebra Queries",
+          "topic": "Relational Algebra Formulations & SQL Queries",
+          "subject": "Databases (DBMS)",
+          "durationMinutes": 180,
+          "completed": false,
+          "resources": [
+            {
+              "name": "Relational Algebra Standard Exercises.pdf",
+              "type": "notes",
+              "url": "/api/download/resource?id=db_relational",
+              "downloaded": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "testAttempts": [],
+  "forumPosts": [
+    {
+      "id": "post_1",
+      "title": "Tricky doubt in Relational Model Join operations",
+      "content": "If R(A, B) has 10 tuples and S(B, C) has 15 tuples, what is the maximum and minimum number of tuples possible in the natural join R ⋈ S? Understanding natural joins often gets confusing when common attributes can contain redundant keys.",
+      "subject": "Databases (DBMS)",
+      "authorName": "Ananya Mehta",
+      "authorRole": "Student",
+      "avatarColor": "#E02424",
+      "createdAt": "2026-05-30T10:00:00Z",
+      "likes": 8,
+      "views": 120,
+      "commentsCount": 2,
+      "isResolved": true,
+      "comments": [
+        {
+          "id": "c1_1",
+          "authorName": "Rohit Kumar",
+          "authorRole": "Topper",
+          "avatarColor": "#10B981",
+          "content": "Hi Ananya! For natural join R ⋈ S on the common attribute B:\n- **Maximum**: If all values of B are identical (e.g., all B in R are '5' and all B in S are '5'), then the join is a Cartesian product. Max Tuples = 10 × 15 = 150 tuples.\n- **Minimum**: If there is no overlap at all in the values of B between R and S (e.g., B in R={1,2} and B in S={3,4}), then Min Tuples = 0.",
+          "createdAt": "2026-05-30T10:15:00Z",
+          "likes": 12,
+          "isCorrectSolution": true
+        },
+        {
+          "id": "c1_2",
+          "authorName": "Shiva AI Mentor",
+          "authorRole": "AI-Mentor",
+          "avatarColor": "#3B82F6",
+          "content": "Spot on explanation, Rohit! To formalize for GATE preparation, remember that natural join acts as a projection on equality of common attributes. \nAlways confirm if the common attribute B is declared as a Primary Key/Foreign Key. \nIf B was a primary key in S, then the maximum number of tuples would instead be strictly bounded by 10 (the size of R) because each tuple in R could join with at most one tuple in S. Keep this distinction in mind as GATE frequently introduces PK constraints!",
+          "createdAt": "2026-05-30T10:20:00Z",
+          "likes": 19
+        }
+      ]
+    },
+    {
+      "id": "post_2",
+      "title": "Doubt regarding Dijkstra algorithm and negative values",
+      "content": "Can anyone explain step-by-step why Dijkstra fails on negative weight edges? I keep reading that it does, but my manual tracing on simple 3-node graphs with a negative-valued loop sometimes yields correct paths. Is it always failing?",
+      "subject": "Algorithms Complexities & Graphs",
+      "authorName": "Vijay Patel",
+      "authorRole": "Student",
+      "avatarColor": "#F59E0B",
+      "createdAt": "2026-05-31T09:00:00Z",
+      "likes": 4,
+      "views: 64,
+      "commentsCount": 1,
+      "isResolved": false,
+      "comments": [
+        {
+          "id": "c2_1",
+          "authorName": "Vikram Sen",
+          "authorRole: "Student",
+          "avatarColor": "#8B5CF6",
+          "content": "Dijkstra is greedy. Once a node is marked 'visited' or popped from the priority queue, Dijkstra assumes its absolute shortest path has been finalized. If a negative weight is discovered later, it can't retroactively re-relax already visited vertices. Bellman-Ford should be used in these scenarios instead.",
+          "createdAt": "2026-05-31T09:30:00Z",
+          "likes": 3
+        }
+      ]
+    }
+  ],
+  "mentorMessages": [
+    {
+      "id": "m_1",
+      "sender": "mentor",
+      "content": "Greetings! I am Shiva, your dedicated GATE 2027 Computer Science & Engineering coach. I've analyzed your starting syllabus profile.\n\nYou have strong landmarks in Operating Systems (CPU Scheduling completed), but we need to structure your progress on Algorithms, theory of computation, compilers, and hardware pipelining modules. How are your preparations progressing, and where can I assist you today?",
+      "timestamp": "2026-05-31T12:00:00Z"
+    }
+  ]
+}

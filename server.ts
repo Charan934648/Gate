@@ -38,14 +38,69 @@ const DATABASE_FILE = path.join(process.cwd(), "data", "db.json");
 // Core database structure seed
 const DEFAULT_SYLLABUS: SubjectSyllabus[] = [
   {
-    subjectName: "Engineering Mathematics & Discrete Maths",
+    subjectName: "Discrete Mathematics & Linear Algebra",
     iconName: "Binary",
     totalHours: 45,
     topics: [
-      { id: "em_1", name: "Linear Algebra: Matrices, Eigenvalues & Eigenvectors", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Medium" },
-      { id: "em_2", name: "Calculus: Limits, Continuity, Maxima & Minima", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
-      { id: "em_3", name: "Probability: Conditional Probability, Bayes Theorem", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
-      { id: "em_4", name: "Discrete: Propositional Logic, Sets, Relations, Graphs", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Hard" }
+      { id: "dm_1", name: "Propositional & First-Order Logic; Sat, Tautologies", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Medium" },
+      { id: "dm_2", name: "Combinatorics: Generating Functions & Pigeonhole Principle", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "dm_3", name: "Graph Theory: Connectivity, Coloring & Planarity", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "dm_4", name: "Linear Algebra: Matrices, Eigenvalues & Cayley-Hamilton", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Medium" }
+    ]
+  },
+  {
+    subjectName: "Digital Logic & Computer Architecture",
+    iconName: "Cpu",
+    totalHours: 35,
+    topics: [
+      { id: "dl_1", name: "Boolean Minimization, K-Maps & Combinational Circuits", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Easy" },
+      { id: "dl_2", name: "Sequential Circuits: Counters, Registers & State Diagrams", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
+      { id: "dl_3", name: "Instruction Pipelining: Hazards, Speedup & CPI", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "dl_4", name: "Memory Hierarchy: Cache Mapping & Page Replacement", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Hard" }
+    ]
+  },
+  {
+    subjectName: "Programming & Data Structures",
+    iconName: "Code",
+    totalHours: 40,
+    topics: [
+      { id: "ds_1", name: "Recursion, Pointer Arithmetic & Parameter Passing in C", completed: true, notesDownloaded: true, revisionCount: 3, difficulty: "Medium" },
+      { id: "ds_2", name: "Stacks, Queues, Linked Lists & Arrays", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Easy" },
+      { id: "ds_3", name: "Binary Trees, Binary Search Trees & AVL Trees", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
+      { id: "ds_4", name: "Heaps: Max/Min Heap Operations & Priority Queues", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" }
+    ]
+  },
+  {
+    subjectName: "Algorithms Complexities & Graphs",
+    iconName: "Code",
+    totalHours: 50,
+    topics: [
+      { id: "alg_1", name: "Asymptotics: Big-O, Master Theorem for Recurrences", completed: true, notesDownloaded: true, revisionCount: 3, difficulty: "Medium" },
+      { id: "alg_2", name: "Greedy vs. Dynamic Programming (Matrix Chain, Knapsack)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "alg_3", name: "Graph Search: BFS, DFS, Dijkstra & Bellman-Ford", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Hard" },
+      { id: "alg_4", name: "MST Algorithms (Kruskal, Prim) & NP-Completeness", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
+    ]
+  },
+  {
+    subjectName: "Theory of Computation",
+    iconName: "Binary",
+    totalHours: 45,
+    topics: [
+      { id: "toc_1", name: "DFAs, NFAs, Minimization & Regular Expressions", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Medium" },
+      { id: "toc_2", name: "Context-Free Grammars, Languages & Pushdown Automata", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
+      { id: "toc_3", name: "Turing Machines, Computability & Church-Turing Thesis", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "toc_4", name: "Undecidable Problems: Halting & Post Correspondence", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
+    ]
+  },
+  {
+    subjectName: "Compiler Design",
+    iconName: "Cpu",
+    totalHours: 30,
+    topics: [
+      { id: "cd_1", name: "Lexical Analysis & LL(1) Parsing Table Construction", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Medium" },
+      { id: "cd_2", name: "LR Parsers: LR(0), SLR(1), LALR(1) & CLR(1)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "cd_3", name: "Syntax-Directed Translation (S-attributed & L-attributed)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
+      { id: "cd_4", name: "Intermediate Code, Three-Address Code & Register Storage", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" }
     ]
   },
   {
@@ -53,10 +108,10 @@ const DEFAULT_SYLLABUS: SubjectSyllabus[] = [
     iconName: "Cpu",
     totalHours: 35,
     topics: [
-      { id: "os_1", name: "Process Management & Threading", completed: true, notesDownloaded: true, revisionCount: 3, difficulty: "Medium" },
-      { id: "os_2", name: "CPU Scheduling Algorithms (FCFS, SJF, Round Robin)", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Easy" },
-      { id: "os_3", name: "Process Synchronization: Semaphores & Deadlocks", completed: false, notesDownloaded: true, revisionCount: 1, difficulty: "Hard" },
-      { id: "os_4", name: "Memory Management: Paging, Virtual Memory & Thrashing", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
+      { id: "os_1", name: "Process Synchronization: Semaphores, Deadlocks & Bankers", completed: true, notesDownloaded: true, revisionCount: 3, difficulty: "Medium" },
+      { id: "os_2", name: "CPU Scheduling Algorithms (FCFS, SJF, Round Robin, SRTF)", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Easy" },
+      { id: "os_3", name: "Memory Management: Paging & Segmentation schemes", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "os_4", name: "Virtual Memory, Thrashing & Page Replacement (LRU, FIFO)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
     ]
   },
   {
@@ -64,10 +119,10 @@ const DEFAULT_SYLLABUS: SubjectSyllabus[] = [
     iconName: "Database",
     totalHours: 30,
     topics: [
-      { id: "db_1", name: "ER-Model & Relational Algebra Definitions", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Easy" },
-      { id: "db_2", name: "SQL Queries (Nested, Joins, Aggregations)", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Medium" },
-      { id: "db_3", name: "Normal Forms (1NF, 2NF, 3NF, BCNF Decomposition)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
-      { id: "db_4", name: "Transaction Control: ACID, Serializability, 2PL", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
+      { id: "db_1", name: "Relational Algebra Formulations & SQL Queries", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Easy" },
+      { id: "db_2", name: "Normal Forms: Functional Dependencies, 3NF & BCNF", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "db_3", name: "Transactions Concurrency: Conflict Serializability, 2PL", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "db_4", name: "Database Indexing: B & B+ Tree heights & Search Costs", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
     ]
   },
   {
@@ -75,21 +130,21 @@ const DEFAULT_SYLLABUS: SubjectSyllabus[] = [
     iconName: "Globe",
     totalHours: 40,
     topics: [
-      { id: "cn_1", name: "OSI & TCP/IP Reference Architectures", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Easy" },
-      { id: "cn_2", name: "Data Link Layer: Framing, Flow & Error Control", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
-      { id: "cn_3", name: "Routing Protocols, IPv4/IPv6 Subnetting & CIDR", completed: false, notesDownloaded: true, revisionCount: 1, difficulty: "Hard" },
-      { id: "cn_4", name: "Transport Layer: TCP Connection, Flow Control, Congestion Control", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
+      { id: "cn_1", name: "Concept of Layering: OSI, TCP/IP, Framing & Sliding Windows", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Easy" },
+      { id: "cn_2", name: "IPv4, IPv6, Subnetting, CIDR & Address Routing", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "cn_3", name: "Routing Protocols: Link State (OSPF) & Distance Vector (RIP)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
+      { id: "cn_4", name: "Transport Layer: TCP Connection, Flow & Congestion Control", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" }
     ]
   },
   {
-    subjectName: "Algorithms & Programming",
-    iconName: "Code",
-    totalHours: 50,
+    subjectName: "General Aptitude",
+    iconName: "Award",
+    totalHours: 25,
     topics: [
-      { id: "algo_1", name: "Asymmetric Complexity Analysis (Big O, Omega, Theta)", completed: true, notesDownloaded: true, revisionCount: 3, difficulty: "Medium" },
-      { id: "algo_2", name: "Searching, Sorting & Divide-and-Conquer paradigms", completed: true, notesDownloaded: true, revisionCount: 2, difficulty: "Medium" },
-      { id: "algo_3", name: "Greedy Algorithms & Dynamic Programming (DP)", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Hard" },
-      { id: "algo_4", name: "Graph Algorithms: BFS, DFS, MST (Kruskal, Prim), Dijkstra", completed: false, notesDownloaded: true, revisionCount: 1, difficulty: "Hard" }
+      { id: "ga_1", name: "Quantitative Aptitude & Clocks/Series Sequences", completed: true, notesDownloaded: true, revisionCount: 1, difficulty: "Easy" },
+      { id: "ga_2", name: "Analytical Reasoning & Spatial Visual Layouts", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" },
+      { id: "ga_3", name: "Verbal Ability: Contextual Synonyms & Logics", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Easy" },
+      { id: "ga_4", name: "Data Interpretation, Charts & Syllogism deductions", completed: false, notesDownloaded: false, revisionCount: 0, difficulty: "Medium" }
     ]
   }
 ];
@@ -97,88 +152,185 @@ const DEFAULT_SYLLABUS: SubjectSyllabus[] = [
 const DEFAULT_MOCK_TESTS: MockTest[] = [
   {
     id: "test_1",
-    title: "GATE Mini-Mock: Operating Systems & Databases",
-    description: "Features realistic Multiple Choice, Multiple Select, and Numerical Answer Type questions corresponding to Process Control and Database Joins.",
-    subject: "OS & DBMS Mix",
+    title: "GATE Mini-Mock 1: Automata & Discrete Math",
+    description: "Evaluates finite automata structures, CFL closure and set membership properties, and onto function combinatorics.",
+    subject: "Theory of Computation & Math",
     durationMinutes: 15,
     questions: [
       {
         id: "q1_1",
         type: QuestionType.MCQ,
-        subject: "Operating Systems",
-        topic: "CPU Scheduling",
-        questionText: "Three processes P1, P2, and P3 arrive at time 0 with CPU burst times of 9, 4, and 2 respectively. Under the Shortest Job First (SJF) non-preemptive scheduling, what is the average waiting time of these processes?",
-        options: ["2.0 ms", "4.67 ms", "4.0 ms", "5.33 ms"],
-        correctAnswer: ["2"], // Corresponding to index 2 (4.0 ms). Wait, P3 runs first (0 to 2, wait=0), P2 runs second (2 to 6, wait=2), P1 runs third (6 to 15, wait=6). Avg wait = (0+2+6)/3 = 8/3 = 2.67 ms. Let's recalculate accurately:
-        // Wait, let's adjust choices so P3(burst=2, wait=0), P2(burst=4, wait=2), P1(burst=9, wait=6). Avg wait is (0+2+6)/3 = 2.67.
-        // Let's provide an exact choice array: ["2.67 ms", "3.0 ms", "4.0 ms", "4.5 ms"], index 0.
+        subject: "Theory of Computation",
+        topic: "DFAs, NFAs, Minimization & Regular Expressions",
+        questionText: "What is the minimum number of states in a minimal Deterministic Finite Automaton (DFA) accepting the language L = { w ∈ {0, 1}* | w contains '010' as a substring }?",
+        options: ["3 states", "4 states", "5 states", "6 states"],
+        correctAnswer: ["1"], // Index 1 represents "4 states"
         marks: 1,
-        explanation: "Since SJF is non-preemptive and all arrive at time 0, they are executed in order of increasing burst times:\n1. P3 (Burst = 2): Starts at 0, finishes at 2. Waiting time = 0.\n2. P2 (Burst = 4): Starts at 2, finishes at 6. Waiting time = 2.\n3. P1 (Burst = 9): Starts at 6, finishes at 15. Waiting time = 6.\nAverage Waiting Time = (0 + 2 + 6) / 3 = 8 / 3 ≈ 2.67 ms."
+        explanation: "To detect the substring '010', we construct states corresponding to progress historical prefixes:\n- State q0 (Start): No prefix found yet.\n- State q1: Found '0'.\n- State q2: Found '01'.\n- State q3 (Accept/Trap): Found '010'. Any further inputs keep us here.\nMinimal DFA requires exactly 4 states (q0, q1, q2, q3)."
       },
       {
         id: "q1_2",
         type: QuestionType.MSQ,
-        subject: "Databases (DBMS)",
-        topic: "Transaction Management",
-        questionText: "Which of the following statement(s) is/are TRUE regarding Two-Phase Locking (2PL) and serializability?",
+        subject: "Theory of Computation",
+        topic: "Context-Free Grammars, Languages & Pushdown Automata",
+        questionText: "Which of the following statement(s) are TRUE regarding properties of Context-Free Languages (CFL) and Context-Free Grammars (CFG)?",
         options: [
-          "Basic 2PL guarantees that every schedule is conflict serializable.",
-          "Basic 2PL is completely free from deadlocks.",
-          "Strict 2PL prevents cascade rollbacks.",
-          "Rigorous 2PL only locks items in the growing phase and releases them after committing."
+          "The intersection of any two Context-Free Languages is always Context-Free.",
+          "The complement of a Context-Free Language is not necessarily Context-Free.",
+          "Deterministic Pushdown Automata (DPDA) are strictly less powerful than non-deterministic Pushdown Automata (PDA).",
+          "Checking the equivalence of two general Context-Free Grammars is an undecidable decision problem."
         ],
-        correctAnswer: ["0", "2", "3"], // A, C, D are correct
+        correctAnswer: ["1", "2", "3"], // Options B, C, D are true
         marks: 2,
-        explanation: "Under Basic 2PL, conflict serializability is guaranteed, hence A is correct. However, basic 2PL does NOT prevent deadlocks, so B is incorrect. Strict 2PL requires holding exclusive locks until commit, which eliminates cascading rollbacks, hence C is correct. Rigorous 2PL holds all locks (shared and exclusive) until commit, satisfying D."
+        explanation: "1. CFLs are NOT closed under intersection, so Option A is false (e.g. L1 = {a^n b^n c m} and L2 = {a m b^n c^n}).\n2. CFLs are not closed under complementation, so is not necessarily Context-Free (Option B is true).\n3. DPDAs recognize Deterministic CFLs, which are a proper subset of general CFLs (Option C is true).\n4. CFG equivalence is a well-known undecidable problem (Option D is true)."
       },
       {
         id: "q1_3",
         type: QuestionType.NAT,
-        subject: "Operating Systems",
-        topic: "Virtual Memory",
-        questionText: "Consider a virtual address space of 32 bits with a page size of 4 KB. If each page table entry takes exactly 4 bytes of storage, what is the size of the single-level page table, in Megabytes (MB)? (Provide only the numerical value).",
-        correctAnswer: ["4"], // 4 MB exactly
+        subject: "Discrete Mathematics & Linear Algebra",
+        topic: "Combinatorics: Generating Functions & Pigeonhole Principle",
+        questionText: "What is the total number of onto functions (surjections) from a set A containing exactly 4 elements to a set B containing exactly 2 elements? (Provide only the integer numerical value).",
+        correctAnswer: ["14"], // 2^4 - 2 = 14
         marks: 2,
-        explanation: "1. Virtual Address Space = 32 bits => Total Addressable Bytes = 2^32 bytes.\n2. Page Size = 4 KB = 2^12 bytes.\n3. Number of Pages = 2^32 / 2^12 = 2^20 pages.\n4. Page Table Entry (PTE) = 4 bytes = 2^2 bytes.\n5. Size of single-level Page Table = Number of Pages × PTE Size = 2^20 × 4 bytes = 4 MB.\nHence, the page table size is 4 MB."
+        explanation: "For any function from set A (size m) to set B (size n), the count of onto functions is given by inclusion-exclusion:\nFor n = 2 and m = 4:\nNumber of total possible functions = 2^4 = 16.\nSub-functions mapping all 4 elements to only one option (not onto) occurs when all map to set element 1 or all map to set element 2. There are exactly 2 such functions.\nOnto Functions = Total - Incomplete = 16 - 2 = 14."
       }
     ]
   },
   {
     id: "test_2",
-    title: "GATE Mini-Mock: Computations, Logic & Maths",
-    description: "Features core discrete mathematics, matrix operations, and Context-Free Language characteristics.",
-    subject: "Math & TOC Mix",
-    durationMinutes: 15,
+    title: "GATE Mini-Mock 2: Systems, Pipelining & Paging",
+    description: "Focuses on CPU scheduling wait times, CIDR IP address matching, and multi-level paging schemes.",
+    subject: "OS & Hardware Architectures",
+    durationMinutes: 20,
     questions: [
       {
         id: "q2_1",
         type: QuestionType.MCQ,
-        subject: "Engineering Mathematics & Discrete Maths",
-        topic: "Linear Algebra",
-        questionText: "Let A be a 3x3 matrix with eigenvalues 1, -1, and 3. What is the determinant of the matrix (A^2 + I) where I is the 3x3 identity matrix?",
-        options: ["10", "40", "20", "30"],
-        correctAnswer: ["2"], // Determinant is product of eigenvalues.
-        // Eigenvalues of A^2 are 1^2, (-1)^2, 3^2 = 1, 1, 9.
-        // Eigenvalues of A^2 + I are (1+1), (1+1), (9+1) = 2, 2, 10.
-        // Det = 2 * 2 * 10 = 40. Wait! Index 1 has "40", index 2 has "20". Wait, correctAnswer is ["1"] for index 1, representing 40! Let's set correctAnswer: ["1"]
+        subject: "Operating Systems",
+        topic: "CPU Scheduling Algorithms (FCFS, SJF, Round Robin, SRTF)",
+        questionText: "Consider three processes P1, P2, and P3 arriving at times 0, 1, and 2 with CPU burst times of 6, 4, and 2 ms respectively. Under preemptive Shortest Remaining Time First (SRTF) scheduling, what is the average waiting time of these processes?",
+        options: ["2.33 ms", "2.67 ms", "3.0 ms", "3.5 ms"],
+        correctAnswer: ["2"], // Index 2 represents 3.0 ms
         marks: 2,
-        explanation: "If λ is an eigenvalue of A, then λ^2 + 1 is an eigenvalue of (A^2 + I).\nGiven eigenvalues of A: 1, -1, 3\nEigenvalues of A^2 + I:\n1. For λ = 1: (1)^2 + 1 = 2\n2. For λ = -1: (-1)^2 + 1 = 2\n3. For λ = 3: (3)^2 + 1 = 10\nSince the determinant of a matrix is equal to the product of its eigenvalues:\nDeterminant(A^2 + I) = 2 × 2 × 10 = 40."
+        explanation: "Let's trace SRTF:\n- t=0: P1 arrives with burst 6. Starts execution.\n- t=1: P2 arrives with burst 4. P1 remaining is 5. Since 4 < 5, P2 preempts P1 and runs.\n- t=2: P3 arrives with burst 2. P2 remaining is 3. Since 2 < 3, P3 preempts P2 and runs.\n- t=3: P3 runs.\n- t=4: P3 finishes. Waiting time of P3 = 0 ms.\n- Next, between P1 (rem 5) and P2 (rem 3), P2 runs from t=4 to t=7. P2 finishes. Waiting time of P2 = 4 (execution start) - 1 (arrival) - 1 (first run offset) = 2 ms.\n- Finally, P1 runs from t=7 to t=13. P1 finishes. Waiting of P1 = 7 - 0 - 0 = 7 ms.\nAverage Waiting Time = (7 + 2 + 0) / 3 = 9 / 3 = 3.0 ms."
       },
       {
         id: "q2_2",
         type: QuestionType.MSQ,
-        subject: "Algorithms & Programming",
-        topic: "Algorithms",
-        questionText: "Which of the following statement(s) is/are TRUE about MST algorithms and Shortest Paths?",
+        subject: "Computer Networks",
+        topic: "IPv4, IPv6, Subnetting, CIDR & Address Routing",
+        questionText: "An network IP block is designated with CIDR subnet prefix 192.168.10.128/26. Which of the following IP addresses reside within the valid range of this CIDR block?",
         options: [
-          "Dijkstra's algorithm is guaranteed to work correctly with negative weight edges.",
-          "Kruskal's algorithm works correctly even if the graph has negative edge weights.",
-          "Prim's algorithm starts from an arbitrary node and grows the MST size by one vertex at each step.",
-          "The Bellman-Ford algorithm can detect the presence of negative cycles in a directed graph."
+          "192.168.10.135",
+          "192.168.10.190",
+          "192.168.10.127",
+          "192.168.10.193"
         ],
-        correctAnswer: ["1", "2", "3"], // B, C, D are correct
+        correctAnswer: ["0", "1"], // Option 0 and 1 represent valid contents
         marks: 2,
-        explanation: "A is incorrect: Dijkstra fails with negative weights because it operates greedily. B, C, and D are standard theorems of Graph Algorithms."
+        explanation: "A subnet mask with prefix /26 uses 26 bits for the network part and 6 bits (32 - 26 = 6) for hosting.\nSize of the IP block = 2^6 = 64 addresses.\nThe block begins at 192.168.10.128 and ends at 192.168.10.191 (inclusive).\nHence, 192.168.10.135 and 192.168.10.190 are valid. 192.168.10.127 falls before the range, and 192.168.10.193 falls after."
+      },
+      {
+        id: "q2_3",
+        type: QuestionType.NAT,
+        subject: "Operating Systems",
+        topic: "Memory Management: Paging & Segmentation schemes",
+        questionText: "Consider a computer system with 32-bit logical addresses and a 4 KB page size. Each page table entry (PTE) takes exactly 4 bytes. If we restrict each intermediate and leaf page table to fit exactly inside a single frame of memory to avoid external fragmentation, how many levels of page tables are required to map the complete addressing space? (Provide only the integer numeric value).",
+        correctAnswer: ["2"], // 2 levels exactly
+        marks: 2,
+        explanation: "- Logical address size = 32 bits.\n- Page structure size = 4 KB = 2^12 bytes, mapping lower 12 bits as byte index/offset.\n- Number of virtual directory pages = 32 - 12 = 20 bits remaining.\n- A single frame is 4 KB = 4096 bytes. PTE size = 4 bytes.\n- Max pointers stored per index page table = 4096 / 4 = 1024 = 2^10 entries.\n- Each page table page maps at most 10 bits of addressing directory tree.\n- Level requirement = 20 bits total / 10 bits per levels = exactly 2 levels of page indexing."
+      }
+    ]
+  },
+  {
+    id: "test_3",
+    title: "GATE Mini-Mock 3: Recursion & Complexity",
+    description: "Verifies execution of recursive C function trace and recurrence complexities under Master Theorem cases.",
+    subject: "Programming & Algorithms",
+    durationMinutes: 15,
+    questions: [
+      {
+        id: "q3_1",
+        type: QuestionType.MCQ,
+        subject: "Programming & Data Structures",
+        topic: "Recursion, Pointer Arithmetic & Parameter Passing in C",
+        questionText: "Consider the following recursive function written in C programming:\n\nint f(int n) {\n  if (n <= 1) return 1;\n  if (n % 2 == 0) return f(n - 1) + n;\n  return f(n - 2) * n;\n}\n\nWhat value will be returned to the caller when f(5) is evaluated?",
+        options: ["11", "15", "21", "25"],
+        correctAnswer: ["1"], // Index 1 is 15
+        marks: 1,
+        explanation: "Let's unwind the recursion for f(5):\n1. f(5): Since 5 is odd, f(5) = f(5-2) * 5 = f(3) * 5.\n2. f(3): Since 3 is odd, f(3) = f(3-2) * 3 = f(1) * 3.\n3. f(1): Triggers the base case (n <= 1), returns 1.\n4. Substituting backwards:\n   - f(3) = 1 * 3 = 3\n   - f(5) = 3 * 5 = 15."
+      },
+      {
+        id: "q3_2",
+        type: QuestionType.MSQ,
+        subject: "Algorithms Complexities & Graphs",
+        topic: "MST Algorithms (Kruskal, Prim) & NP-Completeness",
+        questionText: "Which of the following statement(s) is/are TRUE regarding sorting, heaps, and shortest-path graph algorithms?",
+        options: [
+          "Building a binary max-heap of size N from an arbitrary array takes O(N) worst-case time.",
+          "The search cost of finding the minimum element in an existing binary max-heap is O(1) time.",
+          "Dijkstra's shortest path algorithm can yield wrong cost weights on graphs with negative edge weights.",
+          "The worst-case time to insert elements into an existing binomial tree of order K is strictly bounded by O(K)."
+        ],
+        correctAnswer: ["0", "2", "3"], // A, C, D are true
+        marks: 2,
+        explanation: "1. Build-heap is linear O(N) because the cost sums to O(N) using leaf-downward siftdown (Option A is true).\n2. Max-heap element is at the root, but the MINIMUM element can reside anywhere across the leaf levels (N/2 elements), requiring O(N) search time (Option B is false).\n3. Dijkstra operates greedily under non-negative weights; negative edges break this correctness (Option C is true).\n4. Inserting into a binomial heap of order K carries a standard upper bound of O(K) operations (Option D is true)."
+      },
+      {
+        id: "q3_3",
+        type: QuestionType.NAT,
+        subject: "Algorithms Complexities & Graphs",
+        topic: "Asymptotics: Big-O, Master Theorem for Recurrences",
+        questionText: "Consider the recurrence relation: T(N) = 4T(N/2) + N^2. Solving this using the Master Theorem gives T(N) = Θ(N^k * log N). What is the value of the exponent integer parameter 'k'? (Provide only the integer numeric value).",
+        correctAnswer: ["2"], // k=2 exactly
+        marks: 2,
+        explanation: "For T(N) = aT(N/b) + f(N), we have a=4, b=2, f(N) = N^2.\nCalculate N^(log_b a) = N^(log_2 4) = N^2.\nSince f(N) = Θ(N^2), this falls under Case 2 of the Master Theorem.\nTherefore, the solution is T(N) = Θ(N^(log_b a) * log N) = Θ(N^2 * log N).\nThe exponent k equals 2."
+      }
+    ]
+  },
+  {
+    id: "test_4",
+    title: "GATE Mini-Mock 4: DBMS Norms & Serializability",
+    description: "Evaluates table candiate keys, Boyce-Codd Normal Form detriments, and transaction serializability logs.",
+    subject: "Database Management Systems",
+    durationMinutes: 15,
+    questions: [
+      {
+        id: "q4_1",
+        type: QuestionType.MCQ,
+        subject: "Databases (DBMS)",
+        topic: "Normal Forms: Functional Dependencies, 3NF & BCNF",
+        questionText: "Let R(A, B, C, D) be a relational schema with Functional Dependencies F = { A → B, B → C, C → D, D → A }. What is the highest Normal Form satisfied by this schema R?",
+        options: ["First Normal Form (1NF)", "Second Normal Form (2NF)", "Third Normal Form (3NF)", "Boyce-Codd Normal Form (BCNF)"],
+        correctAnswer: ["3"], // Index 3 is BCNF
+        marks: 2,
+        explanation: "Let's find candidate keys from F:\n- A+ = ABCD (A is candidate key)\n- B+ = BCDA (B is candidate key)\n- C+ = CDAB (C is candidate key)\n- D+ = DABC (D is candidate key)\nHence, the keys are A, B, C, and D. Every attribute in R is a prime attribute.\nFor each functional dependency X → Y in F, the determinant X is a Superkey. This is the exact condition required for BCNF. Hence, highest normal form is BCNF."
+      },
+      {
+        id: "q4_2",
+        type: QuestionType.MSQ,
+        subject: "Databases (DBMS)",
+        topic: "Transactions Concurrency: Conflict Serializability, 2PL",
+        questionText: "Which of the following statement(s) are TRUE regarding database schedules, transaction concurrency, and recoverability?",
+        options: [
+          "Every conflict-serializable schedule is guaranteed to be view-serializable.",
+          "Thomas' Write Rule violates standard conflict-serializability to allow view-serializable schedules.",
+          "The structural 2-Phase Locking (2PL) protocol prevents deadlock occurrences.",
+          "A transaction schedule is recoverable if, for Ti reading from Tj, the commit of Tj occurs before the commit of Ti."
+        ],
+        correctAnswer: ["0", "1", "3"], // A, B, D are true
+        marks: 2,
+        explanation: "1. Conflict serializability is a strict subset of view serializability (Option A is true).\n2. Thomas' write rule allows some blind writes that are not conflict serializable but stay view-serializable (Option B is true).\n3. 2PL does NOT prevent deadlocks, it only guarantees conflict serializability (Option C is false).\n4. Recoverability requires committing writes Tj first before reader Ti commits (Option D is true)."
+      },
+      {
+        id: "q4_3",
+        type: QuestionType.NAT,
+        subject: "Databases (DBMS)",
+        topic: "Database Indexing: B & B+ Tree heights & Search Costs",
+        questionText: "In a B+ Tree index, node block pointers have size 8 bytes, and search keys have size 12 bytes. If the file block size is 512 bytes, what is the maximum order (number of block pointers) possible for an internal index node? (Provide only the integer numeric value).",
+        correctAnswer: ["26"], // p = 26 exactly
+        marks: 2,
+        explanation: "For an internal node of order p, we store p block pointers and (p - 1) search keys.\nThe space occupied must not exceed the block size:\np * Pointer_Size + (p - 1) * Key_Size <= Block_Size\np * 8 + (p - 1) * 12 <= 512\n8p + 12p - 12 <= 512\n20p <= 524 => p <= 26.2\nMaximum integer order is 26 pointers."
       }
     ]
   }
@@ -194,33 +346,33 @@ const DEFAULT_SCHEDULES: DailySchedule[] = [
       {
         id: "task_1",
         timeSlot: "08:00 AM - 10:00 AM",
-        taskTitle: "Revise CPU Scheduling Principles",
-        topic: "CPU Scheduling",
+        taskTitle: "Revise CPU Scheduling Principles & SRTF",
+        topic: "CPU Scheduling Algorithms (FCFS, SJF, Round Robin, SRTF)",
         subject: "Operating Systems",
         durationMinutes: 120,
         completed: true,
         resources: [
           { name: "CPU Scheduling Core Notes.pdf", type: "pdf", url: "/api/download/resource?id=cpu_notes", downloaded: true },
-          { name: "SJF Preemptive & Standard Problems.practice", type: "practice", url: "#", downloaded: false }
+          { name: "SRTF Preemptive Problems & Solutions.practice", type: "practice", url: "#", downloaded: false }
         ]
       },
       {
         id: "task_2",
         timeSlot: "11:00 AM - 12:30 PM",
-        taskTitle: "Solve Linear Algebra Questions",
-        topic: "Linear Algebra",
-        subject: "Engineering Mathematics & Discrete Maths",
+        taskTitle: "Solve Linear Algebra Matrices Questions",
+        topic: "Linear Algebra: Matrices, Eigenvalues & Cayley-Hamilton",
+        subject: "Discrete Mathematics & Linear Algebra",
         durationMinutes: 90,
         completed: true,
         resources: [
-          { name: "Eigenvalues Solved Problems.pdf", type: "pdf", url: "/api/download/resource?id=la_eigen", downloaded: true }
+          { name: "Eigenvalues Solved standard proofs.pdf", type: "pdf", url: "/api/download/resource?id=la_eigen", downloaded: true }
         ]
       },
       {
         id: "task_3",
         timeSlot: "03:00 PM - 05:30 PM",
-        taskTitle: "Normal Forms Normalization",
-        topic: "Normal Forms",
+        taskTitle: "Relational Normal Forms & Dependency Preservation",
+        topic: "Normal Forms: Functional Dependencies, 3NF & BCNF",
         subject: "Databases (DBMS)",
         durationMinutes: 150,
         completed: false,
@@ -239,8 +391,8 @@ const DEFAULT_SCHEDULES: DailySchedule[] = [
       {
         id: "task_4",
         timeSlot: "08:30 AM - 11:30 AM",
-        taskTitle: "Deadlocks Detection & Bankers Algorithm",
-        topic: "Deadlocks",
+        taskTitle: "Process Synchronization: Semaphores & Deadlocks",
+        topic: "Process Synchronization: Semaphores, Deadlocks & Bankers",
         subject: "Operating Systems",
         durationMinutes: 180,
         completed: false,
@@ -251,8 +403,8 @@ const DEFAULT_SCHEDULES: DailySchedule[] = [
       {
         id: "task_5",
         timeSlot: "02:00 PM - 05:00 PM",
-        taskTitle: "Relational Algebra query formulations",
-        topic: "Relational Algebra",
+        taskTitle: "Formulate Relational Algebra Queries",
+        topic: "Relational Algebra Formulations & SQL Queries",
         subject: "Databases (DBMS)",
         durationMinutes: 180,
         completed: false,
@@ -304,7 +456,7 @@ const DEFAULT_FORUM_POSTS: ForumPost[] = [
     id: "post_2",
     title: "Doubt regarding Dijkstra algorithm and negative values",
     content: "Can anyone explain step-by-step why Dijkstra fails on negative weight edges? I keep reading that it does, but my manual tracing on simple 3-node graphs with a negative-valued loop sometimes yields correct paths. Is it always failing?",
-    subject: "Algorithms & Programming",
+    subject: "Algorithms Complexities & Graphs",
     authorName: "Vijay Patel",
     authorRole: "Student",
     avatarColor: "#F59E0B",
@@ -331,7 +483,7 @@ const DEFAULT_MENTOR_MESSAGES: any[] = [
   {
     id: "m_1",
     sender: "mentor",
-    content: "Greetings! I am Shiva, your dedicated GATE 2027 Preparation coach. I've analyzed your starting syllabus profile.\n\nYou have strong landmarks in Operating Systems (CPU Scheduling completed), but Databases and Computer Networks needs standard structuring. How are your preparations progressing, and where can I assist you today?",
+    content: "Greetings! I am Shiva, your dedicated GATE 2027 Computer Science & Engineering coach. I've analyzed your starting syllabus profile.\n\nYou have strong landmarks in Operating Systems (CPU Scheduling completed), but we need to structure your progress on Algorithms, theory of computation, compilers, and hardware pipelining modules. How are your preparations progressing, and where can I assist you today?",
     timestamp: "2026-05-31T12:00:00Z"
   }
 ];
@@ -657,7 +809,7 @@ The JSON must align with this schema:
     "timeSlot": "09:00 AM - 11:30 AM",
     "taskTitle": "Topic title focused on a pending topic",
     "topic": "The exact topic name",
-    "subject": "The exact subject name matching one of the 5 syllabus subjects",
+    "subject": "The exact subject name matching one of the 10 syllabus subjects in the database",
     "durationMinutes": 150,
     "resources": [
       {
@@ -737,7 +889,7 @@ function HeuristicScheduleGenerator(dbState: UserPrepState, dailyHours: number) 
 
   if (pendingTopics.length === 0) {
     // If everything is done, study general revision
-    pendingTopics.push({ topicName: "Full Length Revision & Formula Booklet", subjectName: "Engineering Mathematics & Discrete Maths" });
+    pendingTopics.push({ topicName: "Full Length Revision & Formula Booklet", subjectName: "Discrete Mathematics & Linear Algebra" });
   }
 
   const tasks = [];
